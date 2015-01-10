@@ -6,7 +6,7 @@ excerpt: "A writeup of a recent mini-project: I scraped tweets of the top 500 Tw
 date:   2014-07-02 17:22:24
 ---
 
-<img src="/assets/tsne_preview.jpeg" width="100%">
+<img src="/demo/assets/tsne_preview.jpeg" width="100%">
 
 I was recently looking into various ways of embedding unlabeled, high-dimensional data in 2 dimensions for visualization. A wide variety of methods have been proposed for this task. [This Review paper](http://homepage.tudelft.nl/19j49/Matlab_Toolbox_for_Dimensionality_Reduction_files/TR_Dimensiereductie.pdf) from 2009 contains nice references to many of them (PCA, Kernel PCA, Isomap, LLE, Autoencoders, etc.). If you have Matlab available, the [Dimensionality Reduction Toolbox](http://homepage.tudelft.nl/19j49/Matlab_Toolbox_for_Dimensionality_Reduction.html) has a nice implementation of many of these methods. Scikit Learn also has a brief section on [Manifold Learning](http://scikit-learn.org/stable/modules/manifold.html) along with the implementation.
 
@@ -63,7 +63,7 @@ D = -(X * X.T).todense() # Distance matrix: dot product between tfidf vectors
 
 In the above, `user_language_array` is the 500-element array that has the concatenated tweets. The `TfidfVectorizer` class looks through all tweets and takes note of all words (unigrams) and word bigrams (i.e. series of two words). It builds a dictionary out of all unigram/bigrams and essentially counts up how often every person uses each one. Here's an example of some tweet text converted to unigram/bigrams:
 
-<img src="/assets/tsne_sentprepro.jpeg" width="100%">
+<img src="/demo/assets/tsne_sentprepro.jpeg" width="100%">
 
 The tfidf vectors are returned stacked up as rows inside `X`, which has size `500 x 87,342`. Every one of the 87,342 dimensions corresponds to some unigram or bigram. For example, the 10,000th dimension could correspond to the frequency of usage of the unigram "YOLO". The vectors are L2 normalized, so the dot product between these vectors is related to the angle between any two vectors. This can be interpreted as the similarity of language. Finally, we dump the matrix and the usernames into a JSON file, and we're ready to load things up in Javascript!
 
@@ -77,7 +77,7 @@ We now create an .html file and import [jQuery](http://jquery.com/) (as always),
 
 ### t-SNE
 
-<img src="/assets/tsne_eg.jpeg" width="100%">
+<img src="/demo/assets/tsne_eg.jpeg" width="100%">
 
 Finally we get to the meat! We need to arrange the users in our d3js plot so that similar users appear nearby. The t-SNE cost function was described in this [2008 paper by van der Maaten and Hinton](http://jmlr.csail.mit.edu/papers/volume9/vandermaaten08a/vandermaaten08a.pdf). Similar to many other methods, we set up two distance metrics in the original and the embedded space and minimize their difference. In t-SNE in particular, the original space distance is based on a Gaussian distribution and the embedded space is based on the heavy-tailed Student-t distribution. The KL-divergence formulation has the nice property that it is asymmetric in how it penalizes distances between the two spaces: 
 

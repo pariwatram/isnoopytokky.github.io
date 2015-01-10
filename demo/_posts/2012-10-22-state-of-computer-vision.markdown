@@ -6,7 +6,7 @@ excerpt: "A depressing look at the state of Computer Vision Research and AI in g
 date:   2012-10-22 22:00:00
 ---
 
-<img src="/assets/obamafunny.jpg" width="100%" />
+<img src="/demo/assets/obamafunny.jpg" width="100%" />
 The picture above is funny.
 
 But for me it is also one of those examples that make me sad about the outlook for AI and for Computer Vision. What would it take for a computer to understand this image as you or I do? I challenge you to think explicitly of all the pieces of knowledge that have to fall in place for it to make sense. Here is my short attempt:

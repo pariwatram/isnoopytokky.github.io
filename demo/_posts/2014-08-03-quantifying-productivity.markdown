@@ -29,21 +29,21 @@ ulogme is small and simple: There are two *backend* components: a tracking scrip
 Lets go through a brief overview of some of the resulting visualizations and features. First there is the **single day view**. Lets look at my August 1st, for example. The header tells us the day of the recording and there is space for a short "blog" post that can be written up for each day:
 
 <div class="imgcap">
-<img src="/assets/ulogme_sv1.jpeg">
+<img src="/demo/assets/ulogme_sv1.jpeg">
 <div class="thecap">Header: day information, refresh button, buttons for going between days, and a little editable "blog" post for the day.</div>
 </div>
 
 Now we start to get to the meat. It looks like I was in the office from 10AM to 8PM on this day. Now, remember that we record keystrokes and window titles throughout. What follows is the keystroke breakdown for the day:
 
 <div class="imgcap">
-<img src="/assets/ulogme_sv2.jpeg">
+<img src="/demo/assets/ulogme_sv2.jpeg">
 <div class="thecap">Keystroke statistics for the day.</div>
 </div>
 
 We see that I spent most of the day coding in Sublime Text 2 (which I use to write Python/JS/C++) and Gmail - Looks like I wrote quite a bit of email! Next, ulogme shows the *barcode of the day*, as I like to call it. This is a breakdown of all the windows on that day:
 
 <div class="imgcap">
-<img src="/assets/ulogme_sv3.jpeg">
+<img src="/demo/assets/ulogme_sv3.jpeg">
 <div class="thecap">Barcode of the day. Mousing over any of these strips reveals the exact window title.</div>
 </div>
 
@@ -56,7 +56,7 @@ This view is a little dense so let me unpack it one by one:
 In the end, ulogme shows the final breakdown of titles that occupied me on this day:
 
 <div class="imgcap">
-<img src="/assets/ulogme_sv4.jpeg">
+<img src="/demo/assets/ulogme_sv4.jpeg">
 <div class="thecap">The final breakdown of active window titles.</div>
 </div>
 
@@ -67,7 +67,7 @@ That's interesting, it looks like I actually only spent 10% of my day in Gmail. 
 Insights for one day are interesting, but everything becomes signficiantly more meaningful when it is put in context of a large number of days. Perhaps you noticed the *"Overview"* link on the header; Clicking this takes you to the overview page of ulogme that takes the statistics for all days and puts them together. I recorded my activity for almost 3 months now. Here is the delicious data visualized for the entire period (with some overlayed annotations):
 
 <div class="imgcap">
-<img src="/assets/ulogme_mv1.jpeg">
+<img src="/demo/assets/ulogme_mv1.jpeg">
 <div class="thecap">Total amount of time per day spent in various applications over a period of three months. The titles on top are clickable and toggle on/off the visualization of any one of the titles.</div>
 </div>
 
@@ -82,7 +82,7 @@ SO AWESOME. There are many fun things to note:
 Next, ulogme gives me nice breakdown for both keystrokes and time spent in every window, across all time:
 
 <div class="imgcap">
-<img src="/assets/ulogme_mv2.jpeg">
+<img src="/demo/assets/ulogme_mv2.jpeg">
 <div class="thecap">Summary of keys and time per window across all 3 months.</div>
 </div>
 
@@ -95,7 +95,7 @@ This is a little incomplete because I do some hacking on my laptop, but it paint
 The final visualization is too long to paste here entirely, but I will show a snippet:
 
 <div class="imgcap">
-<img src="/assets/ulogme_mv3.jpeg">
+<img src="/demo/assets/ulogme_mv3.jpeg">
 <div class="thecap">Keystroke frequencies visualized for every day, along with the marginal sums on top and right.</div>
 </div>
 

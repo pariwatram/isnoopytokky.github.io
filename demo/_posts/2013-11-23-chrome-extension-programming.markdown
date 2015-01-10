@@ -22,11 +22,11 @@ I'll walk you through some examples with possible mods of Twitter just to give y
 ### Fixing the Ugly
 
 A recent change on Twitter added this ugly text, visible by default and always, on every single tweet:
-<img src="/assets/chrome1.jpeg">
+<img src="/demo/assets/chrome1.jpeg">
 
 I understand it gets people to accidentally click on these more and pads Twitter's engagement numbers, but it's useless, ugly, and it just takes up too much space. Lets right click on one of these and choose Inspect Element. This opens up the HTML of the page and here we see the culprit DOM elements:
 
-<img src="/assets/chrome2.jpeg">
+<img src="/demo/assets/chrome2.jpeg">
 
 So we have a list `<ul></ul>` with items `<li>` one for each of Reply, Retweet, Favorite and More. Inside every of them they have a `<a>`(anchor that processes the click action), deeper we have a `<span>` that becomes the icon, and finally followed by the ugly text wrapped in `<b>`. That looks easy enough, we will find all these elements based on their  class attribute, descend down to find the text and get rid of it.  So we create a new folder for TwitterClean extension, copy paste some manifest boring code and set it up to load a javascript file anytime twitter loads. For example, right after twitter.com page loads, lets execute:
 
@@ -58,7 +58,7 @@ I'll let you figure out what that single naughty line of code does for you :)
 
 Here's another annoyance: you have your Twitter running on your side monitor and new tweets come in, but Twitter doesn't load them automatically! It just shows this:
 
-<img src="/assets/chrome3.jpeg">
+<img src="/demo/assets/chrome3.jpeg">
 
 That's the passive aggressive look of Twitter telling you that there are two more tweets to show, but also refusing to actually show them. That would be too useful to their users. Instead, they want you to stop what you're doing and click the button to load the new tweets. Luckily, you are skilled at extension hacking so you can simply right click the caption, go to Inspect Element, and see that the &lt;div&gt; element that tells you there are more tweets has class "js-new-tweets-bar". Easy enough:
 
@@ -165,7 +165,7 @@ if($.inArray(charged_user, VIP) !== -1) {
 
 This way, Elon Musk's (or your other Twitter favorites) tweets will always glow a vibrant, green color that is hard to notice! Nice. Here's what we get:
 
-<img src="/assets/chrome4.jpeg">
+<img src="/demo/assets/chrome4.jpeg">
 
 Just look at that! Mashable and some person who needed every single one of his followers to know "Aarrrgh" look normal, Elon's tweets are hard to miss green, and someone who doesn't tweet relatively as often is highlighted a bit as yellow.
 

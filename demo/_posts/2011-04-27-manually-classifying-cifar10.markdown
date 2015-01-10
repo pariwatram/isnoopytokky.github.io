@@ -8,7 +8,7 @@ date:   2011-04-27 22:00:00
 
 ### CIFAR-10
 
-<div style="text-align:center;"><img src="/assets/cifar_preview.png"></div>
+<div style="text-align:center;"><img src="/demo/assets/cifar_preview.png"></div>
 
 **Statistics**. CIFAR-10 consists of 50,000 training images, all of them in 1 of 10 categories (displayed left). The test set consists of 10,000 novel images from the same categories, and the task is to classify each to its category. The state of the art is currently at about 80% classification accuracy (4000 centroids), achieved by [Adam Coates et al. (PDF)](http://ai.stanford.edu/~acoates/papers/coatesleeng_aistats_2011.pdf). This paper achieved the accuracy by using whitening, k-means to learn many centroids, and then using a soft activation function as features.
 
@@ -19,7 +19,7 @@ date:   2011-04-27 22:00:00
 > CIFAR-10 Human Accuracy is approximately 94%
 
 Here are some questionable images from CIFAR-10. The last one is supposed to be a boat:
-<img src="/assets/cifar_weirdimages.png">
+<img src="/demo/assets/cifar_weirdimages.png">
 
 ### Observations
 Some observations as I was classifying the images myself:
@@ -39,7 +39,7 @@ Some observations as I was classifying the images myself:
 I encourage people to try this for themselves (see my code, above), as it is very interesting and fun! I have trouble exactly articulating what I learned, but overall I feel like I gained more intuition for image classification tasks and more appreciation for the difficulty of the problem at hand.
 
 Finally, here is an example of my debugging interface:
-<img src="/assets/cifar_predict.jpg" width="100%">
+<img src="/demo/assets/cifar_predict.jpg" width="100%">
 
 The Matlab code used to generate these results can be found [here](http://cs.stanford.edu/people/karpathy/cifar10inspect.zip)
 

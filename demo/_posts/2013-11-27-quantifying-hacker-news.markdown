@@ -31,7 +31,7 @@ We get 60 such entries every minute (30 for front page and 30 for new page) and 
 Head over to the IPython Notebook <a href="http://cs.stanford.edu/people/karpathy/hn_analysis.html">rendered as HTML</a> for the analysis:
 
 <a href="http://cs.stanford.edu/people/karpathy/hn_analysis.html">
-  <img class="aligncenter size-full wp-image-584" title="hn" src="/assets/hn.jpg" width="100%">
+  <img class="aligncenter size-full wp-image-584" title="hn" src="/demo/assets/hn.jpg" width="100%">
 </a>
 
 Note: I had the entire dataset and .ipynb Ipython Notebook source available for download but recently took it down to save space on my host (sorry).

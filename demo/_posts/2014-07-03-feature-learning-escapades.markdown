@@ -12,7 +12,7 @@ My summer internship work at Google has turned into a CVPR 2014 Oral titled  **"
 ### Act I: Google Research Summer Internship 2011
 
 <div class="imgright imgcap">
-<img src="/assets/megoogle.jpg">
+<img src="/demo/assets/megoogle.jpg">
 <div class="thecap">Hanging out at Google in 2011</div>
 </div>
 
@@ -38,7 +38,7 @@ I left Google that fall and joined Stanford as a PhD student. I was swayed by my
 **Images.** One of my first rotations was with Andrew Ng, who was also at the time interested in Unsupervised Learning in images. I joined forces with his student Adam Coates who worked on doing so with simple, explicit methods (e.g. k-means). The NIPS paper [Emergence of Object-Selective Features in Unsupervised Feature Learning](http://cs.stanford.edu/people/karpathy/nips2012.pdf) was the result of our efforts, but I didn't fully believe that the formulation made sense. The algorithm's only cue for building invariance was through similarity: Things that looked similar (in L2 distance) would group together and become invariants in the layer above. That alone can't be right, I thought.
 
 <div class="imgcap">
-<img src="/assets/nips2012.jpeg">
+<img src="/demo/assets/nips2012.jpeg">
 <div class="thecap">NIPS 2012 paper: Learning Features by linking similar patches into invariants.</div>
 </div>
 
@@ -60,7 +60,7 @@ This was also around the time when the Kinect came out, so I thought I'd give 3D
 I ended up doing a bit of Unsupervised Object Discovery in my 3D meshes and publishing it at a robotics conference, where it was most relevant (<a href="http://cs.stanford.edu/people/karpathy/discovery/">Object Discovery in 3D scenes via Shape Analysis</a>). I was happy that I found a very simple, efficient and surprisingly effective way of computing objectness over 3D meshes, but it wasn't what I set out to do. I followed up on the project a bit while working with Sebastian Thrun for my last rotation, but I remained unsatisfied and unfulfilled. There was no brain stuff, no huge datasets to learn from, and even if it all worked, it would work on static, boring scenes.
 
 <div class="imgcap">
-<img src="/assets/objectdiscovery.jpeg">
+<img src="/demo/assets/objectdiscovery.jpeg">
 <div class="thecap">ICRA 2013 paper: Highlighted mesh parts are discovered objects.</div>
 </div>
 
@@ -74,14 +74,14 @@ Around this time I joined Fei-Fei's lab and looked around for a research directi
 **AlexNets.** It was around this time that the paper that would change the course of my research, and also the course of Computer Vision came out. I'm referring to <a href="http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf">"ImageNet Classification with Deep Convolutional Neural Networks"</a>, in which a Convolutional Neural Network (CNN) significantly outperformed state of the art methods on the ImageNet Classification Challenge. The described CNN architecture has become known as the *"AlexNet"*, after the first author of the paper: [Alex Krizhevsky](http://www.cs.toronto.edu/~kriz/). ConvNets have come of age and leapfrogged from working on toy MNIST/CIFAR-10 datasets just a year ago, to suddenly running on large images and beating methods that have been developed for years. I did not expect such an astronomical leap and I think neither did most of the community.
 
 <div class="imgcap">
-<img src="/assets/zeilercnnfeatures.jpeg">
+<img src="/demo/assets/zeilercnnfeatures.jpeg">
 <div class="thecap">Learned CNN features. Visualization taken from a nice paper by Zeiler and Fergus 2013, <a href="http://www.matthewzeiler.com/pubs/arxive2013/arxive2013.pdf">Visualizing and Understanding Convolutional Networks"</a>. The features become more extended and complex deeper in the network.</div>
 </div>
 
 **Transfer Learning.** The impressive performance of the AlexNet was interesting by itself, but the second unintuitive finding that followed was that the ImageNet-pretrained representation proved extremely potent in transfer learning tasks to other datasets. Suddenly, people were taking an ImageNet-pretrained CNN, chopping off the classifier layer on top, treating the layers immediately before as a fixed feature extractor and beating state of the art methods across many different datasets (see <a href="http://arxiv.org/abs/1310.1531">DeCAF</a>, <a href="http://arxiv.org/abs/1312.6229">Overfeat</a>, and <a href="http://arxiv.org/abs/1403.6382">Razavian et al.</a>). I still find this rather astonishing. In some parallel universe, I can image a CNN that performs very well on ImageNet but doesn't necessarily transfer to strange datasets of sculptures, birds and other things, and I'm nodding along and saying that that's to be expected. But that seems to not be the universe we live in.
 
 <div class="imgcap">
-<img src="/assets/cnntsne.jpeg">
+<img src="/demo/assets/cnntsne.jpeg">
 <div class="thecap">A small crop of a 6000x6000 image that shows how CNN arranges the visual world (with t-SNE). Find full images <a href="http://cs.stanford.edu/people/karpathy/cnnembed/">here</a>. </div>
 </div>
 
@@ -103,7 +103,7 @@ When I entered Google the second time this summer, the landscape was very differ
 In my case, number 4 turned out to be ["Large-scale Video Classification with Convolutional Neural Networks"](http://cs.stanford.edu/people/karpathy/deepvideo/), in which we trained large Spatio-Temporal Convolutional Neural Networks. Ironically, the dataset we chose to use (Sports videos) turned out to be a little too easy to learn rich, spatio-temporal features since the network could get very far ignoring much of the motion and relying mostly on static appearances (e.g. if you're trying to tell difference between tennis and swimming, you need not be concerned with minute movement details). But I expect to see considerable improvements in the coming years. (From others, as I am no longer working on videos.)
 
 <div class="imgcap">
-<img src="/assets/sportspredict.jpeg">
+<img src="/demo/assets/sportspredict.jpeg">
 <div class="thecap">Spatio-Temporal CNN predicting Sports on videos. (Blue = ground truth, Green = correct prediction, Red = incorrect)</div>
 </div>
 

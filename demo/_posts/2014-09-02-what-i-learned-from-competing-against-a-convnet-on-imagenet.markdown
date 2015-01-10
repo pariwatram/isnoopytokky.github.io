@@ -19,7 +19,7 @@ Additionally, we just (September 2nd) published an arXiv preprint describing the
 For the purposes of this post, I would like to focus, in particular, on image classification because this task is the common denominator for many other Computer Vision tasks. The classification task is made up of 1.2 million images in the training set, each labeled with one of 1000 categories that cover a wide variety of objects, animals, scenes, and even some abstract geometric concepts such as *"hook"*, or *"spiral"*. The 100,000 test set images are released with the dataset, but the labels are withheld to prevent teams from overfitting on the test set. The teams have to predict 5 (out of 1000) classes and an image is considered to be correct if at least one of the predictions is the ground truth. The test set evaluation is carried out on our end by comparing the predictions to our own set of ground truth labels. 
 
 <div class="imgcap">
-<img src="/assets/cnntsne.jpeg">
+<img src="/demo/assets/cnntsne.jpeg">
 <div class="thecap">Example images from the classification task. Find full-scale images <a href="http://cs.stanford.edu/people/karpathy/cnnembed/">here</a>.</div>
 </div>
 
@@ -42,7 +42,7 @@ There's one issue to clarify on. You may ask: *But wait, the ImageNet test set l
 I developed a labeling interface that would help us evaluate the human performance. It looked similar to, but not identical, to the screenshot below:
 
 <div class="imgcap">
-<img src="/assets/ilsvrc1.png">
+<img src="/demo/assets/ilsvrc1.png">
 <div class="thecap">A crop of a screenshot of the <a href="http://cs.stanford.edu/people/karpathy/ilsvrc/">labeling interface</a> for the ILSVRC validation data. Try it out for yourself.</div>
 </div>
 
@@ -61,7 +61,7 @@ The interface consisted of the test image on the left, and 1000 classes listed o
 > My error turned out to be 5.1%, compared to GoogLeNet error of 6.8%. Still a bit of a gap to close (and more).
 
 <div class="imgcap">
-<img src="/assets/ilsvrc3.png">
+<img src="/demo/assets/ilsvrc3.png">
 <div class="thecap">Representative example of practical frustrations of labeling ILSVRC classes. Aww, a cute dog! Would you like to spend 5 minutes scrolling through 120 breeds of dog to guess what species it is?</div>
 </div>
 
@@ -86,7 +86,7 @@ We inspected both human and GoogLeNet errors to gain an understanding of common 
 4. **Miscellaneous sources.** Additional sources of error that occur relatively infrequently include extreme closeups of parts of an object, unconventional viewpoints such as a rotated image, images that can significantly benefit from the ability to read text (e.g. a featureless container identifying itself as "*face powder*"), objects with heavy occlusions, and images that depict a collage of multiple images. In general, we found that humans are more robust to all of these types of error.
 
 <div class="imgcap">
-<img src="/assets/ilsvrc2.png">
+<img src="/demo/assets/ilsvrc2.png">
 <div class="thecap">Representative validation images that highlight common sources of error. For each image, we display the ground truth in blue, and top 5 predictions from GoogLeNet follow (red = wrong, green = right). GoogLeNet predictions on the validation
 set images were graciously provided by members of the GoogLeNet team. From left to right: Images that contain multiple objects, images of extreme closeups and uncharacteristic views, images with filters, images that significantly benefit from the ability to read text, images that contain very small and thin objects, images with abstract representations, and example of a fine-grained image that GoogLeNet correctly identifies but a human would have significant difficulty with.</div>
 </div>
