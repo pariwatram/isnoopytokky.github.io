@@ -4,6 +4,6 @@ title: About
 permalink: /about/
 ---
 
-I'm **Pariwat Ramphuengnit**, a little programer.
+I'm **Andrej Karpathy**, a PhD student at Stanford studying Machine Learning (Deep Learning mostly), with applications in Computer Vision. 
 
-My [facebook](https://www.facebook.com/SnOOpYPariwat) has much more information.
+My [academic website](http://cs.stanford.edu/people/karpathy/) has much more information.
